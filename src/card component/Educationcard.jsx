@@ -8,7 +8,7 @@ export default function EducationCard({
 }) {
   return (
     <div
-      className="w-[200px] h-[280px] sm:w-[280px] sm:h-[200px] md:w-[350px] md:h-[200px] 
+      className="min-w-full h-[200px] sm:h-[200px] md:min-w-[380px] md:h-[200px] 
         flex flex-col justify-between items-center text-center
         bg-white text-black dark:bg-gray-700 dark:text-white p-2 sm:p-4 rounded shadow-md 
         transition-transform duration-300 transform hover:scale-105"

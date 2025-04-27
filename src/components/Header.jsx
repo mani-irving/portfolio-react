@@ -75,10 +75,10 @@ export default function Header({
             <a href="#">Home</a>
           </li>
           <li className="px-4 hover:text-blue-100">
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li className="px-4 hover:text-blue-100">
-            <a href="#">Education</a>
+            <a href="#education">Education</a>
           </li>
           <li className="px-4 hover:text-blue-100">
             <a href="#Skills">Skills</a>
@@ -121,13 +121,13 @@ export default function Header({
               <a href="#">Home</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="#">Education</a>
+              <a href="#education">Education</a>
             </li>
             <li>
-              <a href="#">Skills</a>
+              <a href="#Skills">Skills</a>
             </li>
             <li>
               <a href="#">Projects</a>

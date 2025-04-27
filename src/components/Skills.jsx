@@ -18,7 +18,7 @@ export default function Skills() {
         <div>
           <h2 className="text-2xl font-bold">Programming Languages</h2>
         </div>
-        <div className="flex flex-col gap-2 items-center sm:flex-row sm:flex-wrap sm:justify-between">
+        <div className="flex flex-col gap-4 sm:gap-6 items-center sm:flex-row sm:flex-wrap sm:justify-start">
           {ProgrammingLanguage.map((detail) => (
             <Card
               key={detail.id}
