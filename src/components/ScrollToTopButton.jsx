@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { motion } from "motion/react";
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -35,7 +35,15 @@ export default function ScrollToTopButton() {
   };
 
   return (
-    <div
+    <motion.div
+      animate={{
+        y: [0, 10, 0],
+      }}
+      transition={{
+        duration: 2,
+        delay: 1,
+        repeat: Infinity,
+      }}
       className={`h-[70px] w-[70px] rounded-full p-3
        bg-blue-300 shadow-lg hover:bg-blue-500 flex 
         items-center justify-center fixed bottom-5 right-5
@@ -44,6 +52,6 @@ export default function ScrollToTopButton() {
       onClick={dragToTop}
     >
       {arrowUpwards}
-    </div>
+    </motion.div>
   );
 }

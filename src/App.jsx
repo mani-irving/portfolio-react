@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion, useScroll } from "motion/react";
 import "../src/App.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -21,8 +22,16 @@ function App() {
     }
   }, [theme]);
 
+  const ScrollYProgress = useScroll().scrollYProgress;
+
   return (
     <div className="bg-white text-black dark:bg-black dark:text-white ">
+      <motion.div
+        style={{
+          scaleX: ScrollYProgress,
+        }}
+        className="bg-blue-500 h-[2px] w-full fixed top-0 left-0 origin-left "
+      ></motion.div>
       <Header
         theme={theme}
         setTheme={setTheme}

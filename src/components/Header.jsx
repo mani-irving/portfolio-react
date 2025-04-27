@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 export default function Header({
   theme,
@@ -53,7 +54,18 @@ export default function Header({
         dark:text-white dark:shadow-lg flex justify-between 
         items-center py-[15px] px-[2%] sm:px-[4%] md:px-[6%] lg:px-[8%] "
     >
-      <div id="logo-Name" className="flex gap-1 items-center">
+      <motion.div
+        animate={{
+          y: [0, 4, 0],
+        }}
+        transition={{
+          duration: 3,
+          delay: 1,
+          repeat: Infinity,
+        }}
+        id="logo-Name"
+        className="flex gap-1 items-center"
+      >
         <div className="flex gap-1 items-center border-amber-50 rounded hover:text-blue-200">
           <div
             className={`mAlphabetInLogo bg-black dark:bg-white w-[4px] h-[25px] rounded`}
@@ -67,7 +79,7 @@ export default function Header({
         </div>
 
         <h1 className=" font-bold text-2xl">anikant</h1>
-      </div>
+      </motion.div>
 
       <nav className="hidden lg:flex ">
         <ul className="flex justify-between items-center">
@@ -106,39 +118,69 @@ export default function Header({
       {/* Hamburger-Menu */}
       <div
         onClick={() => sethamburgerMenuActivated((prev) => !prev)}
-        className="lg:hidden p-[5px] sm:p-[10px]  flex flex-col gap-1 border-[1px] border-solid 
+        className="lg:hidden p-[5px] sm:p-[15px]  flex flex-col gap-1 border-[1px] border-solid 
+                  hover:scale-110 transition-transform
                 border-gray-500 rounded-md hover:bg-blue-200 relative"
       >
-        <div className="bg-gray-500 w-[20px] h-[2px] sm:w-[35px] sm:h-[4px] rounded"></div>
-        <div className="bg-gray-500 w-[20px] h-[2px] sm:w-[35px] sm:h-[4px] rounded"></div>
-        <div className="bg-gray-500 w-[20px] h-[2px] sm:w-[35px] sm:h-[4px] rounded"></div>
+        <div className="bg-gray-500 w-[30px] h-[4px] sm:w-[35px] sm:h-[4px] rounded"></div>
+        <div className="bg-gray-500 w-[30px] h-[4px] sm:w-[35px] sm:h-[4px] rounded"></div>
+        <div className="bg-gray-500 w-[30px] h-[4px] sm:w-[35px] sm:h-[4px] rounded"></div>
       </div>
 
       {hamburgerMenuActivated && (
-        <div className="lg:hidden mt-2 bg-white dark:bg-black shadow-md rounded  p-4 absolute top-13 right-4">
-          <ul className="flex flex-col gap-2">
-            <li>
+        <div
+          className="lg:hidden mt-2 bg-white dark:bg-black shadow-md rounded-md
+      p-8 absolute top-[70px] right-4 w-[200px] flex flex-col gap-4"
+        >
+          <ul className="flex flex-col gap-4">
+            <li className="hover:text-blue-400">
               <a href="#">Home</a>
             </li>
-            <li>
+            <li className="hover:text-blue-400">
               <a href="#about">About</a>
             </li>
-            <li>
+            <li className="hover:text-blue-400">
               <a href="#education">Education</a>
             </li>
-            <li>
+            <li className="hover:text-blue-400">
               <a href="#Skills">Skills</a>
             </li>
-            <li>
+            <li className="hover:text-blue-400">
               <a href="#">Projects</a>
             </li>
-            <li>
+            <li className="hover:text-blue-400">
               <a href="#">Certifications</a>
             </li>
-            <li>
+            <li className="hover:text-blue-400">
               <a href="#">Achievements</a>
             </li>
           </ul>
+
+          {/* BEAUTIFUL Theme Toggle Button inside Hamburger */}
+          {/* Beautiful Theme Toggle Switch */}
+          <div
+            onClick={toggleTheme}
+            className={`mt-4 flex items-center justify-between cursor-pointer 
+            w-20 h-10 p-1 rounded-full transition-colors duration-300
+            ${theme === "light" ? "bg-gray-300" : "bg-purple-700"}`}
+          >
+            {/* Sun Icon */}
+            <div className="w-1/2 flex justify-center items-center text-black">
+              {lightIcon}
+            </div>
+
+            {/* Moon Icon */}
+            <div className="w-1/2 flex justify-center items-center text-white">
+              {darkIcon}
+            </div>
+
+            {/* Sliding Circle */}
+            <div
+              className={`absolute w-8 h-8 bg-white opacity-65 rounded-full shadow-md transform 
+              transition-transform duration-300
+              ${theme === "light" ? "translate-x-1" : "translate-x-10"}`}
+            />
+          </div>
         </div>
       )}
     </header>

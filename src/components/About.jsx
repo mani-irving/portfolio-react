@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 
 export default function About() {
   return (
@@ -6,7 +7,17 @@ export default function About() {
       id="about"
       className="bg-white text-black  dark:bg-gray-900 dark:text-gray-200 pt-[80px]  max-h-100vh min-h-[calc(100vh-62px)] flex flex-col items-center gap-5 px-[2%] sm:px-[4%] md:px-[6%] lg:px-[8%]"
     >
-      <div className="h-[1px] w-full bg-black dark:bg-blue-300 mb-[30px]"></div>
+      <motion.div
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{
+          duration: 3,
+          delay: 0.5,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+        className="h-[2px] bg-blue-800 w-full origin-center dark:bg-blue-300 mb-[30px]"
+      ></motion.div>
       <div className="flex justify-center">
         <h1 className="font-bold">About Me</h1>
       </div>
@@ -34,7 +45,17 @@ export default function About() {
           software solutions and grow as a developer.
         </p>
       </div>
-      <div className="h-[1px] w-full bg-black dark:bg-blue-300 mt-[30px]"></div>
+      <motion.div
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{
+          duration: 3,
+          delay: 0.5,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+        className="h-[2px] bg-blue-800 w-full origin-center dark:bg-blue-300 mb-[30px]"
+      ></motion.div>
     </section>
   );
 }
