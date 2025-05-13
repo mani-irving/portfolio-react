@@ -96,7 +96,7 @@ export default function Header({
             <a href="#Skills">Skills</a>
           </li>
           <li className="px-4 hover:text-blue-100">
-            <a href="#">Projects</a>
+            <a href="#Projects">Projects</a>
           </li>
           <li className="px-4 hover:text-blue-100">
             <a href="#">Certifications</a>
