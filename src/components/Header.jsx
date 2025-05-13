@@ -99,11 +99,15 @@ export default function Header({
             <a href="#Projects">Projects</a>
           </li>
           <li className="px-4 hover:text-blue-100">
+            <a href="#">Contact</a>
+          </li>
+          {/* Will add it later */}
+          {/* <li className="px-4 hover:text-blue-100">
             <a href="#">Certifications</a>
           </li>
           <li className="px-4 hover:text-blue-100">
             <a href="#">Achievements</a>
-          </li>
+          </li> */}
         </ul>
       </nav>
 
@@ -146,14 +150,17 @@ export default function Header({
               <a href="#Skills">Skills</a>
             </li>
             <li className="hover:text-blue-400">
-              <a href="#">Projects</a>
+              <a href="#Projects">Projects</a>
             </li>
             <li className="hover:text-blue-400">
+              <a href="#contact">Contact</a>
+            </li>
+            {/* <li className="hover:text-blue-400">
               <a href="#">Certifications</a>
             </li>
             <li className="hover:text-blue-400">
               <a href="#">Achievements</a>
-            </li>
+            </li> */}
           </ul>
 
           {/* BEAUTIFUL Theme Toggle Button inside Hamburger */}
