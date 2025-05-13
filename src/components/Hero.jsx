@@ -24,7 +24,7 @@ export default function Hero() {
             from polished UIs to powerful backend systems.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#">
+            <a href="#Projects">
               <button className="bg-blue-600 text-white rounded px-5 py-2 hover:bg-blue-500 shadow-2xl cursor-pointer">
                 Explore My Work
               </button>
