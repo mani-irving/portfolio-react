@@ -9,7 +9,7 @@ export default function ScrollToTopButton() {
       width="50"
       height="50"
       fill="currentColor"
-      class="bi bi-arrow-up-short"
+      className="bi bi-arrow-up-short"
       viewBox="0 0 16 16"
     >
       <path

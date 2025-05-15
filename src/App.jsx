@@ -1,16 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll } from "motion/react";
 import "../src/App.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
-import ScrollToTopButton from "./components/ScrollToTopButton";
 import "./App.css";
-import Project from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Imports from "./components/Imports";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -41,14 +34,7 @@ function App() {
         hamburgerMenuActivated={hamburgerMenuActivated}
         sethamburgerMenuActivated={sethamburgerMenuActivated}
       />
-      <Hero />
-      <ScrollToTopButton />
-      <About />
-      <Education />
-      <Skills />
-      <Project />
-      <Contact />
-      <Footer />
+      <Imports />
     </div>
   );
 }
