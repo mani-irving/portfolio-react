@@ -99,7 +99,7 @@ export default function Header({
             <a href="#Projects">Projects</a>
           </li>
           <li className="px-4 hover:text-blue-100">
-            <a href="#">Contact</a>
+            <a href="#Contact">Contact</a>
           </li>
           {/* Will add it later */}
           {/* <li className="px-4 hover:text-blue-100">
@@ -153,7 +153,7 @@ export default function Header({
               <a href="#Projects">Projects</a>
             </li>
             <li className="hover:text-blue-400">
-              <a href="#contact">Contact</a>
+              <a href="#Contact">Contact</a>
             </li>
             {/* <li className="hover:text-blue-400">
               <a href="#">Certifications</a>

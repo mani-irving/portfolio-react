@@ -9,6 +9,8 @@ import Skills from "./components/Skills";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import "./App.css";
 import Project from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -45,6 +47,8 @@ function App() {
       <Education />
       <Skills />
       <Project />
+      <Contact />
+      <Footer />
     </div>
   );
 }
