@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Copy, Check } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function ContactSection() {
   const email = "mani73244@gmail.com"; // <-- replace with your real email
