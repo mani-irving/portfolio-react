@@ -10,6 +10,13 @@ function App() {
   const [hamburgerMenuActivated, sethamburgerMenuActivated] = useState(false);
 
   useEffect(() => {
+    const localTheme = localStorage.getItem("theme");
+    if (localTheme) {
+      setTheme(localTheme);
+    }
+  }, []);
+
+  useEffect(() => {
     const root = window.document.documentElement;
     if (theme === "dark") {
       root.classList.add("dark");

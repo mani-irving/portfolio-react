@@ -36,7 +36,9 @@ export default function Header({
   const [logoColour, setLogoColour] = useState("bg-black");
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   //   useEffect(() => {
